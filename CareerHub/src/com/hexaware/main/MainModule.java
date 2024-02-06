@@ -28,7 +28,8 @@ public class MainModule {
 			System.out.println("[6.Insert a Job List]");
 			System.out.println("[7.Insert a Applicant]");
 			System.out.println("[8.Insert a Job Application]");
-			System.out.println("[9. exit]");
+			System.out.println("[9.Search job by salary]");
+			System.out.println("[10. exit]");
 			
 			int choice = scn.nextInt();
 			
@@ -62,6 +63,11 @@ public class MainModule {
 				
 				break;
 			case 9:
+				System.out.println(view.jobBySalary());
+				
+				
+				break;
+			case 10:
 				flag = false;
 				System.out.println("exiting....");
 				break;

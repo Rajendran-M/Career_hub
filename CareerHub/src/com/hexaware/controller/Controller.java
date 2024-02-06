@@ -59,7 +59,9 @@ public class Controller {
 		return jobs;
 	}
 
-	public List<JobListing> jobBySalary(double sal) {
+	public List<JobListing> jobBySalary() {
+		System.out.println("Enter Expected Salary");
+		double sal = scn.nextDouble();
 		Connection connection = DBConnUtil.getConnection();
 		List<JobListing> jobs = new ArrayList<>();
 
