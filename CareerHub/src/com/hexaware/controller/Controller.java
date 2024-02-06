@@ -43,6 +43,32 @@ public class Controller {
 			return jobs;
 		}
 		
+		public List<JobListing> jobBySalary(double sal) {
+			Connection connection = DBConnUtil.getConnection();
+				List<JobListing> jobs = new ArrayList<>();
+				
+				String query = "SELECT * FROM joblisting Where salary > ? ";
+				try {
+					PreparedStatement ps = connection.prepareStatement(query);
+					ps.setDouble(1,sal);
+					ResultSet rs = ps.executeQuery();
+					while(rs.next()) {
+						JobListing joblisting = new JobListing();
+						joblisting.setJobID(rs.getInt("JobID"));
+						joblisting.setCompanyID(rs.getInt("CompanyID"));
+						joblisting.setJobTitle(rs.getString("JobTitle"));
+						joblisting.setJobDescription(rs.getString("JobDescription"));
+						joblisting.setJobLocaton(rs.getString("JobLocation"));
+						joblisting.setSalary(rs.getInt("Salary"));
+						joblisting.setJobType(rs.getString("JobType"));
+						joblisting.setPostedDate(rs.getDate("PostedDate").toLocalDate());
+						jobs.add(joblisting);
+					}
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+				return jobs;
+			}
 			
 	}
 
