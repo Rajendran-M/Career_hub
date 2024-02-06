@@ -72,7 +72,9 @@ public class CareerHubServiceImpl implements ICareerHubService {
 			ps.setString(5, applicant.getPhone());
 			ps.setString(6, applicant.getResume());
 			ps.executeUpdate();
-		} catch (SQLException e) {
+		}
+		
+		catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}

@@ -18,12 +18,18 @@ public class Applicant {
 		
 	}
 
-	public Applicant(int applicantID, String firstName, String lastName, String email, String phone, String resume) {
+	public Applicant(int applicantID, String firstName, String lastName, String email, String phone, String resume) throws InvalidEmailFormatException {
 		
 		this.applicantID = applicantID;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.email = email;
+	 if (email.contains("@")) {
+		 this.email = email;}
+	 else {
+		 
+	        throw new InvalidEmailFormatException("Email must contain @ symbol");	
+	 }
+	 
 		this.phone = phone;
 		this.resume = resume;
 	}
@@ -33,7 +39,7 @@ public class Applicant {
 	}
 
 	public void setApplicantID(int applicantID) {
-		applicantID = applicantID;
+		this.applicantID = applicantID;
 	}
 
 	public String getFirstName() {
@@ -41,7 +47,7 @@ public class Applicant {
 	}
 
 	public void setFirstName(String firstName) {
-		firstName = firstName;
+		this.firstName = firstName;
 	}
 
 	public String getLastName() {
@@ -49,7 +55,7 @@ public class Applicant {
 	}
 
 	public void setLastName(String lastName) {
-		lastName = lastName;
+		this.lastName = lastName;
 	}
 
 	public String getEmail() {
@@ -59,13 +65,15 @@ public class Applicant {
 
 	public void setEmail(String email) throws InvalidEmailFormatException {
 	    validateEmail(email);
-	    email = email;
+	   this.email = email;
 	}
 
 
 	private void validateEmail(String email) throws InvalidEmailFormatException {
 		   if (!email.contains("@")) {
-		        throw new InvalidEmailFormatException("Email must contain @ symbol");	 }  }
+		        throw new InvalidEmailFormatException("Email must contain @ symbol");	 
+		        } 
+		   }
 
 
 	public String getPhone() {
@@ -73,7 +81,7 @@ public class Applicant {
 	}
 
 	public void setPhone(String phone) {
-		phone = phone;
+		this.phone = phone;
 	}
 
 	public String getResume() {
@@ -81,7 +89,7 @@ public class Applicant {
 	}
 
 	public void setResume(String resume) {
-		resume = resume;
+		this.resume = resume;
 	}
 	
     public void createProfile(String email, String firstName, String lastName, String phone) throws InvalidEmailFormatException {
