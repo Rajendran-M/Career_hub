@@ -1,15 +1,11 @@
 package com.hexaware.main;
 
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.hexaware.controller.*;
 import com.hexaware.dao.*;
-import com.hexaware.model.Applicant;
-import com.hexaware.model.Company;
-import com.hexaware.model.JobApplication;
-import com.hexaware.model.JobListing;
+
 
 public class MainModule {
 	static Controller view = new Controller();

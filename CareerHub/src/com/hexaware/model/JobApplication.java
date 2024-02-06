@@ -29,7 +29,7 @@ public class JobApplication {
 	}
 
 	public void setApplicationID(int applicationID) {
-		applicationID = applicationID;
+		this.applicationID = applicationID;
 	}
 
 	public int getJobID() {
@@ -37,7 +37,7 @@ public class JobApplication {
 	}
 
 	public void setJobID(int jobID) {
-		jobID = jobID;
+		this.jobID = jobID;
 	}
 
 	public int getApplicantID() {
@@ -45,7 +45,7 @@ public class JobApplication {
 	}
 
 	public void setApplicantID(int applicantID) {
-		applicantID = applicantID;
+		this.applicantID = applicantID;
 	}
 
 	public LocalDate getApplicationDate() {
@@ -61,7 +61,7 @@ public class JobApplication {
 	}
 
 	public void setCoverLetter(String coverLetter) {
-		coverLetter = coverLetter;
+		this.coverLetter = coverLetter;
 	}
 
 	@Override

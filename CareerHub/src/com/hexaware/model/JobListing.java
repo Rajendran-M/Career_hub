@@ -5,14 +5,14 @@ import java.util.List;
 
 public class JobListing {
 	
-	private int JobID;
-	private int CompanyID;
-	private String JobTitle;
-	private String JobDescription;
-	private String JobLocaton;
-	private int Salary;
-	private String JobType;
-	private LocalDate PostedDate;
+	private int jobID;
+	private int companyID;
+	private String jobTitle;
+	private String jobDescription;
+	private String jobLocaton;
+	private int salary;
+	private String jobType;
+	private LocalDate postedDate;
 	public JobListing() {
 		
 	}
@@ -20,63 +20,63 @@ public class JobListing {
 	public JobListing(int jobID, int companyID, String jobTitle, String jobDescription, String jobLocaton, int salary,
 			String jobType, LocalDate postedDate) {
 		
-		this.JobID = jobID;
-		this.CompanyID = companyID;
-		this.JobTitle = jobTitle;
-		this.JobDescription = jobDescription;
-		this.JobLocaton = jobLocaton;
-		this.Salary = salary;
-		this.JobType = jobType;
-		this.PostedDate = postedDate;
+		this.jobID = jobID;
+		this.companyID = companyID;
+		this.jobTitle = jobTitle;
+		this.jobDescription = jobDescription;
+		this.jobLocaton = jobLocaton;
+		this.salary = salary;
+		this.jobType = jobType;
+		this.postedDate = postedDate;
 	}
 
 	public int getJobID() {
-		return JobID;
+		return jobID;
 	}
 	public void setJobID(int jobID) {
-		JobID = jobID;
+		this.jobID = jobID;
 	}
 	public int getCompanyID() {
-		return CompanyID;
+		return companyID;
 	}
 	public void setCompanyID(int companyID) {
-		CompanyID = companyID;
+		this.companyID = companyID;
 	}
 	public String getJobTitle() {
-		return JobTitle;
+		return jobTitle;
 	}
 	public void setJobTitle(String jobTitle) {
-		JobTitle = jobTitle;
+		this.jobTitle = jobTitle;
 	}
 	public String getJobDescription() {
-		return JobDescription;
+		return jobDescription;
 	}
 	public void setJobDescription(String jobDescription) {
-		JobDescription = jobDescription;
+		this.jobDescription = jobDescription;
 	}
 	public String getJobLocaton() {
-		return JobLocaton;
+		return jobLocaton;
 	}
 	public void setJobLocaton(String jobLocaton) {
-		JobLocaton = jobLocaton;
+		this.jobLocaton = jobLocaton;
 	}
 	public int getSalary() {
-		return Salary;
+		return salary;
 	}
 	public void setSalary(int salary) {
-		Salary = salary;
+		this.salary = salary;
 	}
 	public String getJobType() {
-		return JobType;
+		return jobType;
 	}
 	public void setJobType(String jobType) {
-		JobType = jobType;
+		this.jobType = jobType;
 	}
 	public LocalDate getPostedDate() {
-		return PostedDate;
+		return postedDate;
 	}
 	public void setPostedDate(LocalDate postedDate) {
-		PostedDate = postedDate;
+		this.postedDate = postedDate;
 	}
 	
 	public void apply(int applicantId,String coverLetter) {
@@ -89,15 +89,15 @@ public class JobListing {
     	
     }
    public  LocalDate getJobpostDate() {
-	return PostedDate;
+	return postedDate;
 	   
    }
     
 	@Override
 	public String toString() {
-		return "\nJobListing [JobID=" + JobID + ", CompanyID=" + CompanyID + ", JobTitle=" + JobTitle + ", JobDescription="
-				+ JobDescription + ", JobLocaton=" + JobLocaton + ", Salary=" + Salary + ", JobType=" + JobType
-				+ ", PostedDate=" + PostedDate + "] \n";
+		return "\nJobListing [JobID=" + jobID + ", CompanyID=" + companyID + ", JobTitle=" + jobTitle + ", JobDescription="
+				+ jobDescription + ", JobLocaton=" + jobLocaton + ", Salary=" + salary + ", JobType=" + jobType
+				+ ", PostedDate=" + postedDate + "] \n";
 	}
 
 }
